@@ -27,4 +27,16 @@ Fragment doesn't render as an element, So you can't apply styling.
 To help to achieve UI Components reusability 
 1. Single Responsibility principle: A component should have only one reason to change or should have only one responsibility/Function
 2. Presenter Container Pattern: 
-![alt text](image.png)
+![alt text](./Images/image.png)
+
+## Component: Memory-Manage
+![alt text](./Images/image-1.png)
+
+* Every Components having its memory to track data.
+* But it is not possible with normal variabel or local variable
+* Here react introduce, state variable to check changes on component and update during run time on where required(globally)
+* This will done using useState() special function or called React hooks.
+
+## React Hooks:
+React Hooks are special functions that let you "hook into" React state and lifecycle methods from function components.
+It will perform designated task.

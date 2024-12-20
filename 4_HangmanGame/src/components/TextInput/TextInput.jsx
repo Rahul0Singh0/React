@@ -1,4 +1,4 @@
-function TextInput({ type = "text", label, placeholder = "Enter your input here", onChangeHandler }) {
+function TextInput({ type, label, placeholder = "Enter your input here", onChangeHandler }) {
     return (
         <label>
             <span className="text-gray-700">{label}</span>
