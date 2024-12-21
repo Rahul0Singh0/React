@@ -40,3 +40,24 @@ To help to achieve UI Components reusability
 ## React Hooks:
 React Hooks are special functions that let you "hook into" React state and lifecycle methods from function components.
 It will perform designated task.
+
+# Conditional Rendering
+## React Router Library:
+It third party library to solve our redirection problem between multiple pages.
+And achieve to single page web page rather than if you are using multiple page in your webapp.
+To install:
+``` bash
+npm install react-router-dom
+```
+App component as a child to BrowserRouter.
+In App component hierarchy, enable the capability of BrowserRouter hierarchy.
+``` JavaScript
+<BrowserRouter>
+    <App />
+</BrowserRouter>
+```
+* Routes
+* Route
+* Link
+* useNavigate() hook: useNavigate is a hook that returns a navigate function and help to <u>condination rendering</u>
+* etc...
