@@ -13,24 +13,26 @@ function TextInputFormContainer() {
     function handleFormSubmit(event) {
         // Form default behavior is to refresh the page. To prevent this
         event.preventDefault();
-        console.log("Form submitted", value);
+        // console.log("Form submitted", value);
         if(value) {
             // If we have something in value then we want to go to the play page
-            navigate("/play");
+            // navigate(`/play?text=${value}`);
+            // navigate(`/play/${value}`);
             // setTimeout( () => {
             //     navigate("/play");
             // }, 3000);
+            navigate(`/play`, { state: { wordSelected: value } });
         }
     }
 
     function handleTextInputChange(event) {
-        console.log("Text input changed");
-        console.log(event.target.value);
+        // console.log("Text input changed");
+        // console.log(event.target.value);
         setValue(event.target.value);
     }
 
     function handleShowHideClick() {
-        console.log("Show/Hide button clicked");
+        // console.log("Show/Hide button clicked");
         if(inputType === "password") {
             setInputType("text");
         } else {

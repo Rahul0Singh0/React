@@ -61,3 +61,55 @@ In App component hierarchy, enable the capability of BrowserRouter hierarchy.
 * Link
 * useNavigate() hook: useNavigate is a hook that returns a navigate function and help to <u>condination rendering</u>
 * etc...
+
+## Given Task
+* problem type: data transfer from one page to another
+* Enter data in Input form, Task is to display that data on Screen after submit the data
+  ![alt text](./Images/image2.png)
+* Solutions:
+
+  ![alt text](./Images/image3.png)
+  ``` JavaScript
+  // Query Params
+  // From
+  const navigate = useNavigate();
+  navigate(`/play?text=${value}`);
+  // To
+  const [ searchParams ] = useSearchParams();
+  console.log(searchParams.get("text"));
+  ```
+  ``` JavaScript
+  // path params
+  // From
+  navigate(`/play/${value}`);
+  // To
+  const { text } = useParams();
+  return (<h1>PlayGame {text}</h1>);
+  // In App Component, can give multiple path params
+  <Route path="/play/:text/:id" element={<PlayGame />} />
+  ```
+  Both above <u>query params</u> and <u>path params</u> solutions are not good for 2 player game because input will be show to other player in url.
+
+* Third Solution is better than both above given by react-router.
+  ``` JavaScript
+  // From
+  navigate(`/play`, { state: { wordSelected: value } });
+  // To
+  // using useLocation() hook function given by react-router
+  const { state } = useLocation();
+  ```
+
+## Rendering List
+
+ ![alt text](./Images/image4.png)
+* Solution:
+  ```JavaScript
+  function Rendered() {
+    const arr = ['Hello', 'World'];
+    return (
+      <>
+         { arr.map((element, idx) => <b key={idx}>{element}</b>) }
+      </>
+    );
+  }
+  ```
