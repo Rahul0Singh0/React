@@ -38,8 +38,8 @@ To help to achieve UI Components reusability
 * This will done using useState() special function or called React hooks.
 
 ## React Hooks:
-React Hooks are special functions that let you "hook into" React state and lifecycle methods from function components.
-It will perform designated task.
+* React Hooks are special functions that let you "hook into" React state and lifecycle methods from function components. It will perform designated task.
+* You can't execute hook inside a callback.(useState())
 
 # Conditional Rendering
 ## React Router Library:
@@ -113,3 +113,39 @@ In App component hierarchy, enable the capability of BrowserRouter hierarchy.
     );
   }
   ```
+
+# Effects and Lifecycle
+## Lifecycle
+![alt text](./Images/image5.png)
+
+## useEffect hook
+![alt text](./Images/image6.png)
+
+``` JavaScript
+useEffect(() => {
+    console.log("component first load"); // not call on updates
+}, []); // passing empty dependency array
+
+useEffect(() => {
+    console.log("component first load and update");
+}); // not passing dependency array
+
+useEffect(() => {
+    console.log("component first load and update value changed");
+}, [value]);
+
+useEffect(() => {
+    console.log("component first load and inputType value changed");
+}, [inputType]);
+```
+
+Note: The changes in a normal variable can't update the whole component.
+``` JavaScript
+let x = 0; 
+
+useEffect(() => {
+  console.log("component first load and x value changed");
+}, [x]);
+
+return <button onClick={() => x += 1}>Click me</button>
+```
