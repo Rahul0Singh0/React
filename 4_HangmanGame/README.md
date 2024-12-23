@@ -121,6 +121,8 @@ In App component hierarchy, enable the capability of BrowserRouter hierarchy.
 ## useEffect hook
 ![alt text](./Images/image6.png)
 
+NOTE
+
 ``` JavaScript
 useEffect(() => {
     console.log("component first load"); // not call on updates

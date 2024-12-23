@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import TextInputForm from "./TextInputForm";
 import { useNavigate } from "react-router-dom";
 
@@ -41,21 +41,23 @@ function TextInputFormContainer() {
         // console.log(inputType);
     }
 
-    useEffect(() => {
-        console.log("component first load"); // not call on updates
-    }, []); // passing empty dependency array
+    // Mounting
+    // useEffect(() => {
+    //     console.log("component first load"); // not call on updates
+    // }, []); // passing empty dependency array
 
-    useEffect(() => {
-        console.log("component first load and update");
-    }); // not passing dependency array
+    // Mounting and Updating
+    // useEffect(() => {
+    //     console.log("component first load and update");
+    // }); // not passing dependency array
 
-    useEffect(() => {
-        console.log("component first load and update value changed");
-    }, [value]);
+    // useEffect(() => {
+    //     console.log("component first load and update value changed");
+    // }, [value]);
 
-    useEffect(() => {
-        console.log("component first load and inputType value changed");
-    }, [inputType]);
+    // useEffect(() => {
+    //     console.log("component first load and inputType value changed");
+    // }, [inputType]);
 
     return ( 
         <>
@@ -65,8 +67,28 @@ function TextInputFormContainer() {
                 handleTextInputChange={handleTextInputChange}
                 handleShowHideClick={handleShowHideClick}
             />
+
+            {/* { (inputType === 'password') ? <Temp /> : null } */}
         </>
     );
 }
+
+// Unmounting example
+// function Temp() {
+//     useEffect(() => {
+//         console.log("Temp component first load");
+
+//         // when unmount (remove from DOM)
+//         return () => {
+//             console.log('Temp component unmounted');
+//         }
+//     }, []);
+
+//     return (
+//         <div>
+//             <h1>Temp</h1>
+//         </div>
+//     );
+// }
 
 export default TextInputFormContainer;

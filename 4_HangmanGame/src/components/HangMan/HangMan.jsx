@@ -11,7 +11,7 @@ function HangMan({ step }) {
     const images = [ Level1, Level2, Level3, Level4, Level5, Level6, Level7, Level8 ];
 
     return (
-        <div className='w-[400px] h-[400px]'>
+        <div className='w-[400px] h-[350px]'>
             <img 
                 src={step >= images.length ? images[images.length - 1] : images[step]}
             />
