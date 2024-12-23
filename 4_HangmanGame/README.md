@@ -151,3 +151,7 @@ useEffect(() => {
 
 return <button onClick={() => x += 1}>Click me</button>
 ```
+
+# State Management
+
+![alt text](./Images/image7.png)
