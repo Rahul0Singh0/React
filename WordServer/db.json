@@ -71,6 +71,90 @@
         {
             "wordValue": "SUNFLOWER",
             "wordHint": "A type of flower"
+        },
+        {
+            "wordValue": "CHOCOLATE",
+            "wordHint": "A sweet treat"
+        },
+        {
+            "wordValue": "PENGUIN",
+            "wordHint": "A flightless bird"
+        },
+        {
+            "wordValue": "MICROSCOPE",
+            "wordHint": "A scientific instrument"
+        },
+        {
+            "wordValue": "ASTRONAUT",
+            "wordHint": "A space traveler"
+        },
+        {
+            "wordValue": "DINOSAUR",
+            "wordHint": "An extinct reptile"
+        },
+        {
+            "wordValue": "RAINBOW",
+            "wordHint": "A colorful arc in the sky"
+        },
+        {
+            "wordValue": "BUTTERFLY",
+            "wordHint": "An insect with colorful wings"
+        },
+        {
+            "wordValue": "WATERFALL",
+            "wordHint": "A cascade of water"
+        },
+        {
+            "wordValue": "ROBOT",
+            "wordHint": "A mechanical being"
+        },
+        {
+            "wordValue": "SATELLITE",
+            "wordHint": "An object in space"
+        },
+        {
+            "wordValue": "CAMERA",
+            "wordHint": "A device for taking photos"
+        },
+        {
+            "wordValue": "TRIANGLE",
+            "wordHint": "A three-sided shape"
+        },
+        {
+            "wordValue": "VOLLEYBALL",
+            "wordHint": "A sport with a net"
+        },
+        {
+            "wordValue": "CROCODILE",
+            "wordHint": "A large reptile"
+        },
+        {
+            "wordValue": "BALLOON",
+            "wordHint": "An inflatable object"
+        },
+        {
+            "wordValue": "SANDCASTLE",
+            "wordHint": "A structure made of sand"
+        },
+        {
+            "wordValue": "MOONLIGHT",
+            "wordHint": "Light from the moon"
+        },
+        {
+            "wordValue": "SPACESHIP",
+            "wordHint": "A vehicle for space travel"
+        },
+        {
+            "wordValue": "WINDMILL",
+            "wordHint": "A structure that converts wind into energy"
+        },
+        {
+            "wordValue": "DRAGONFLY",
+            "wordHint": "An insect with long wings"
+        },
+        {
+            "wordValue": "STETHOSCOPE",
+            "wordHint": "A medical instrument"
         }
     ]
 }
