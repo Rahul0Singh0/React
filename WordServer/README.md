@@ -1,0 +1,1 @@
+## JSON server used to our HANGMAN Game project
