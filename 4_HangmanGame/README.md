@@ -209,3 +209,7 @@ const wordStore = create((set) => ({
 // where we want use:-
 const { setWordList } = wordStore(); 
 ```
+
+## Project folder structure
+
+![alt text](./Images/image8.png)
