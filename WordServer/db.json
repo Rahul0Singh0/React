@@ -155,6 +155,114 @@
         {
             "wordValue": "STETHOSCOPE",
             "wordHint": "A medical instrument"
+        },
+        {
+            "wordValue": "PIZZA",
+            "wordHint": "A popular Italian dish"
+        },
+        {
+            "wordValue": "EAGLE",
+            "wordHint": "A bird of prey"
+        },
+        {
+            "wordValue": "SUNSET",
+            "wordHint": "The time when the sun goes down"
+        },
+        {
+            "wordValue": "CAR",
+            "wordHint": "A four-wheeled vehicle"
+        },
+        {
+            "wordValue": "ROSE",
+            "wordHint": "A type of flower"
+        },
+        {
+            "wordValue": "ICEBERG",
+            "wordHint": "A large floating mass of ice"
+        },
+        {
+            "wordValue": "TIGER",
+            "wordHint": "A large wild cat"
+        },
+        {
+            "wordValue": "BALLET",
+            "wordHint": "A form of dance"
+        },
+        {
+            "wordValue": "CASTLE",
+            "wordHint": "A large fortified building"
+        },
+        {
+            "wordValue": "FIREWORKS",
+            "wordHint": "Explosive devices used for celebrations"
+        },
+        {
+            "wordValue": "JELLYFISH",
+            "wordHint": "A sea creature with tentacles"
+        },
+        {
+            "wordValue": "KITE",
+            "wordHint": "A flying toy"
+        },
+        {
+            "wordValue": "LANTERN",
+            "wordHint": "A portable light source"
+        },
+        {
+            "wordValue": "MUSHROOM",
+            "wordHint": "A type of fungus"
+        },
+        {
+            "wordValue": "NEPTUNE",
+            "wordHint": "A planet in the solar system"
+        },
+        {
+            "wordValue": "ORANGE",
+            "wordHint": "A citrus fruit"
+        },
+        {
+            "wordValue": "PARROT",
+            "wordHint": "A colorful bird"
+        },
+        {
+            "wordValue": "QUARTER",
+            "wordHint": "A unit of currency"
+        },
+        {
+            "wordValue": "RABBIT",
+            "wordHint": "A small mammal"
+        },
+        {
+            "wordValue": "SQUIRREL",
+            "wordHint": "A small rodent"
+        },
+        {
+            "wordValue": "TURTLE",
+            "wordHint": "A slow-moving reptile"
+        },
+        {
+            "wordValue": "UMBRELLA",
+            "wordHint": "A device used to protect from rain"
+        },
+        {
+            "wordValue": "VIOLIN",
+            "wordHint": "A stringed musical instrument"
+        },
+        {
+            "wordValue": "WATERMELON",
+            "wordHint": "A large fruit with red flesh"
+        },
+        {
+            "wordValue": "XYLOPHONE",
+            "wordHint": "A musical instrument with wooden bars"
+        },
+        {
+            "wordValue": "YOGURT",
+            "wordHint": "A dairy product"
+        },
+        {
+            "wordValue": "ZEBRA",
+            "wordHint": "A striped animal"
         }
     ]
 }
