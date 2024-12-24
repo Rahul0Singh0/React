@@ -155,8 +155,22 @@ return <button onClick={() => x += 1}>Click me</button>
 
 # State Management
 
+## useState()
+* useState is a React Hook that lets you add a state variable to your component.
+* Call useState at the top level of your component to declare a state variable.
+* It is a special function that allows you to manage state within functional components without the need for class-based components.
+
+useState returns an array with exactly two values:
+1. The current state. During the first render, it will match the initialState you have passed.
+2. The set function that lets you update the state to a different value and trigger a re-render.
+``` JavaScript
+const [state, setState] = useState(initialState)
+```
+
+
 ![alt text](./Images/image7.png)
 
+## Context API
 ``` JavaScript
 // I save as WordContext.js
 import { createContext } from "react";
