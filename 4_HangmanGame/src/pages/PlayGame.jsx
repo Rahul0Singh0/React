@@ -1,9 +1,10 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import MaskedText from "../components/MaskedText/MaskedText";
 import LetterButtons from "../components/LetterButtons/LetterButtons";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import HangMan from "../components/HangMan/HangMan";
 import Button from "../components/Button/Button";
+import { WordContext } from "../context/WordContext";
 
 function PlayGame() {
 
@@ -12,14 +13,16 @@ function PlayGame() {
 
     // const { text } = useParams();
 
-    const { state } = useLocation();
+    // const { state } = useLocation();
 
     const [ guessedLetters, setGuessedLetters ] = useState([]);
 
     const [ step, setStep ] = useState(0);
 
+    const { word, hint } = useContext(WordContext);
+
     function handleLetterClick(letter) {
-        if(state?.wordSelected?.toUpperCase().includes(letter)) {
+        if(word?.toUpperCase().includes(letter)) {
             console.log("correct");
         } else {
             console.log("wrong");
@@ -31,13 +34,14 @@ function PlayGame() {
     return (
         <>
             <h1>PlayGame</h1>
+            {/* { wordList.map(( wordObject ) => <li key={ wordObject.id }>{ wordObject.wordValue }</li>) } */}
 
-            { state?.wordSelected && (
+            { word && (
                 <>
-                    <h1 className="mt-2 mb-2 text-blue-800 font-bold">{state.hintSelected}</h1>
-                    <MaskedText text={ state.wordSelected } guessedLetters={guessedLetters}  />
+                    <h1 className="mt-2 mb-2 text-blue-800 font-bold">{ hint }</h1>
+                    <MaskedText text={ word } guessedLetters={guessedLetters}  />
                     <div>
-                    <LetterButtons text={state.wordSelected} guessedLetters={guessedLetters} onLetterClick={handleLetterClick} />
+                    <LetterButtons text={ word } guessedLetters={guessedLetters} onLetterClick={handleLetterClick} />
                     </div>
                     <div>
                         <HangMan step={step} />

@@ -67,7 +67,7 @@ In App component hierarchy, enable the capability of BrowserRouter hierarchy.
 * Enter data in Input form, Task is to display that data on Screen after submit the data
   ![alt text](./Images/image2.png)
 * Solutions:
-
+  
   ![alt text](./Images/image3.png)
   ``` JavaScript
   // Query Params
@@ -98,6 +98,7 @@ In App component hierarchy, enable the capability of BrowserRouter hierarchy.
   // using useLocation() hook function given by react-router
   const { state } = useLocation();
   ```
+  Note: best solution is stateMangament (Context api)
 
 ## Rendering List
 
@@ -155,3 +156,56 @@ return <button onClick={() => x += 1}>Click me</button>
 # State Management
 
 ![alt text](./Images/image7.png)
+
+``` JavaScript
+// I save as WordContext.js
+import { createContext } from "react";
+// common storage
+export const WordContext = createContext(null); // create a context object
+```
+``` JavaScript
+// available to all components hierarchy by doing this
+//  go to the main or app component means top component
+import { WordContext } from './context/WordContext.js'
+createRoot(document.getElementById('root')).render(
+    <WordContext.Provider> {/* Available to all component hierarchy */}
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </WordContext.Provider>
+)
+```
+``` JavaScript
+// We need to use a hook called as useContext() by calling it in 
+// which component, where we require this
+// First I set or store the data in it from Home component
+const { setWordList } = useContext(WordContext);
+async function fetchWords() {setWordList([...data])};
+```
+Note: You can create multiple context api depends on your requirement
+
+### zunstand library
+
+``` JavaScript
+// create a file named WordStore.js
+import { create } from 'zustand';
+
+// use zustand state management
+// create function creates a store for us
+const wordStore = create((set) => ({
+    wordList: [],
+    word: '',
+    setWordList: (list) => {
+        set((state) => {
+            // Whatever you return from here will be the new state
+            return {
+                ...state,
+                wordList: list
+            }
+        });
+    },
+}));
+
+// where we want use:-
+const { setWordList } = wordStore(); 
+```

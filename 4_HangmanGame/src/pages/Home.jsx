@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom";
 import Button from "../components/Button/Button";
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
+import { WordContext } from "../context/WordContext";
 
 function Home() {
 
-    const [ word, setWord ] = useState('');
-    const [ hint, setHint ] = useState('');
+    // const [ word, setWord ] = useState('');
+    // const [ hint, setHint ] = useState('');
+
+    const { setWord, setHint } = useContext(WordContext);
 
     async function fetchWords() {
         // fetch promise based function provided by browser to call network
         const response = await fetch('http://localhost:3000/words');
         const data = await response.json(); // custom object converted to json
         // console.log(data);
+
+        // setWordList([...data]);
 
         const randomIndex = Math.floor(Math.random() * data.length);
         // console.log(data[randomIndex].wordHint);
@@ -26,7 +31,12 @@ function Home() {
 
     return (
         <>
-            <Link to={"/play"} state={{ wordSelected: word, hintSelected: hint }}>
+            {/* <Link to={"/play"} state={{ wordSelected: word, hintSelected: hint }}>
+                <Button 
+                    text={"Single Player Game"}
+                />
+            </Link> */}
+            <Link to={"/play"} >
                 <Button 
                     text={"Single Player Game"}
                 />
