@@ -15,4 +15,13 @@ const wordStore = create((set) => ({
             }
         });
     },
+    setWord: (newWord) => {
+        set((state) => {
+            // Whatever you return from here will be the new state
+            return {
+                ...state,
+                wordList: newWord
+            }
+        });
+    },
 }));
