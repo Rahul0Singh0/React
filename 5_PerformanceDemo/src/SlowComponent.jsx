@@ -6,11 +6,13 @@ const waitingForSomething = (ms) => {
     }
 }
 
-export default function SlowComponent() {
-    waitingForSomething(2000);
+export default function SlowComponent({ time, custom, x }) {
+    waitingForSomething(time[0]);
+    custom();
     return (
         <>
             <h1>Hello</h1>
+            {x}
             {console.log("SlowComponent Rendered")}
         </>
     );
