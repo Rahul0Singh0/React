@@ -60,5 +60,3 @@ This type of implementation, Whenever we click increment button , it will re-ren
 ## Virtual DOM / Fibre Tree
 * Virtual DOM is a lightweight in-memory representation of the real DOM.
 ![alt text](image.png)
-
-## Memoisation
