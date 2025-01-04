@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- task is how to focus in react -->
+    <input type="email" id="emailinput">
+    <button id="click">Click</button>
+    <script>
+        const btn = document.getElementById('click');
+        const inp = document.getElementById('emailinput');
+        btn.addEventListener("click", (e) => {
+            console.log(inp.focus);
+            inp.focus();
+        });
+    </script>
+</body>
+</html>
